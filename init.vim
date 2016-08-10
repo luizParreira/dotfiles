@@ -154,3 +154,4 @@ let g:syntastic_scss_checkers = ['scss_lint']
 " (using Droid Sans Mono for Powerline)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
