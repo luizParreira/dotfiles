@@ -21,7 +21,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
-
+Plugin 'junegunn/goyo.vim'
 call vundle#end()
 
 filetype indent plugin on
