@@ -22,7 +22,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'flazz/vim-colorschemes'
-
+Plugin 'junegunn/goyo.vim'
 call vundle#end()
 
 filetype indent plugin on
@@ -30,10 +30,10 @@ filetype indent plugin on
 " Colorscheme
 colorscheme base16-atelierdune
 set background=dark
-highlight LineNr ctermfg=grey ctermbg=black
-highlight TabLineFill ctermfg=LightGreen ctermbg=LightBlue
-highlight TabLine ctermfg=grey ctermbg=DarkBlue
-highlight TabLineSel ctermfg=Black ctermbg=Grey
+" highlight LineNr ctermfg=grey ctermbg=black
+" highlight TabLineFill ctermfg=LightGreen ctermbg=LightBlue
+" highlight TabLine ctermfg=grey ctermbg=DarkBlue
+" highlight TabLineSel ctermfg=Black ctermbg=Grey
 
 
 " Linters - JS, SCSS and Ruby
