@@ -21,19 +21,20 @@ Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
-" Plugin 'flazz/vim-colorschemes'
+" Plugin 'atelierbram/vim-colors_atelier-schemes'
+Plugin 'nielsmadan/harlequin'
 Plugin 'junegunn/goyo.vim'
 call vundle#end()
 
 filetype indent plugin on
 
 " Colorscheme
-colorscheme base16-atelierdune
+colorscheme harlequin
 set background=dark
-" highlight LineNr ctermfg=grey ctermbg=black
-" highlight TabLineFill ctermfg=LightGreen ctermbg=LightBlue
-" highlight TabLine ctermfg=grey ctermbg=DarkBlue
-" highlight TabLineSel ctermfg=Black ctermbg=Grey
+"highlight LineNr ctermfg=grey ctermbg=black
+"highlight TabLineFill ctermfg=LightGreen ctermbg=LightSkyBlue
+"highlight TabLine ctermfg=black ctermbg=CornFlowerBlue
+"highlight TabLineSel ctermfg=black ctermbg=RoyalBlue
 
 
 " Linters - JS, SCSS and Ruby
@@ -49,11 +50,11 @@ set t_Co=256
 let hour = str2nr(system('date +%H'), 10)
 
 " Set the dark theme between 7 PM and 6 AM
-" if (hour > 18 || hour < 6)
-"  set background=dark
-" else
-"  set background=light
-" endif
+if (hour > 18 || hour < 6)
+  set background=dark
+else
+  set background=light
+endif
 
 " Enable light line
 set laststatus=2
