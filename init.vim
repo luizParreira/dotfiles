@@ -160,11 +160,6 @@ endfunction
 " Map the above function to CTRL + a
 vnoremap <C-a> :call IncrementNumbersInColumn()<CR>
 
-" Linters - JS, SCSS and Ruby
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_scss_checkers = ['scss_lint']
-"let g:syntastic_ruby_checkers = ['rubocop']
-
 " Airline - status bar
 " You need to install powerline fonts in order to be able to " see some icons:
 " $ git clone https://github.com/powerline/fonts.git && cd fonts
