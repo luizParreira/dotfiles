@@ -41,8 +41,9 @@ set background=dark
 
 " Linters - JS, SCSS and Ruby
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_scss_checkers = ['scss_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_scss_scss_lint_exec = 'scss-lint'
+let g:syntastic_scss_checkers = ['scss_lint']
 
 " Show partial commands in the last line of the screen
 set showcmd
