@@ -27,6 +27,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nielsmadan/harlequin'
 Plugin 'junegunn/goyo.vim'
 Plugin 'wincent/command-t'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
