@@ -26,9 +26,14 @@ Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'atelierbram/vim-colors_atelier-schemes'
 Plugin 'nielsmadan/harlequin'
 Plugin 'junegunn/goyo.vim'
+Plugin 'wincent/command-t'
+
 call vundle#end()
 
 filetype indent plugin on
+
+" Map my leader ket
+let mapleader=","
 
 " Colorscheme
 colorscheme harlequin
@@ -169,3 +174,35 @@ vnoremap <C-a> :call IncrementNumbersInColumn()<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
+
+" Goodies gotten from `DestroyAllSoftware` File navigation in Vim screencast
+" https://www.destroyallsoftware.com/screencasts/catalog/file-navigation-in-vim
+"
+" Command to print the current directory in vim `%%`
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Function to update a file name
+function! RenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'))
+  if new_name != old_name && new_name != ''
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
+" Function to update a file name using git
+function! GitRenameFile()
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'))
+  if new_name != old_name && new_name != ''
+    exec ':!git mv ' . old_name . ' ' . new_name
+    redraw!
+    exec ':silent q ' . old_name
+    exec ':e ' . new_name
+    redraw!
+  endif
+endfunction
+map <leader>g :call GitRenameFile()<cr>
