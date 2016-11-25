@@ -29,6 +29,8 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
