@@ -15,7 +15,6 @@ Plugin 'tpope/vim-rake'
 Plugin 'mxw/vim-jsx'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-markdown'
-Plugin 'scrooloose/syntastic'
 Plugin 'file:///Users/luiz/vim-swift'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
@@ -31,6 +30,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -47,12 +47,8 @@ set background=dark
 "highlight TabLine ctermfg=black ctermbg=CornFlowerBlue
 "highlight TabLineSel ctermfg=black ctermbg=RoyalBlue
 
-
-" Linters - JS, SCSS and Ruby
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_scss_scss_lint_exec = 'scss-lint'
-let g:syntastic_scss_checkers = ['scss_lint']
+" Configuring visual of linter
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 
 " Show partial commands in the last line of the screen
 set showcmd
