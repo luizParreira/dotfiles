@@ -31,6 +31,7 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'w0rp/ale'
+Plugin 'JuliaEditorSupport/julia-vim'
 
 call vundle#end()
 
