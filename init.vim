@@ -24,6 +24,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'atelierbram/vim-colors_atelier-schemes'
 Plugin 'nielsmadan/harlequin'
+Plugin 'nightsense/seabird'
 Plugin 'junegunn/goyo.vim'
 Plugin 'wincent/command-t'
 Plugin 'airblade/vim-gitgutter'
@@ -41,7 +42,8 @@ filetype indent plugin on
 let mapleader=","
 
 " Colorscheme
-colorscheme harlequin
+colorscheme petrel
+set termguicolors
 set background=dark
 "highlight LineNr ctermfg=grey ctermbg=black
 "highlight TabLineFill ctermfg=LightGreen ctermbg=LightSkyBlue
@@ -59,11 +61,6 @@ set t_Co=256
 let hour = str2nr(system('date +%H'), 10)
 
 " Set the dark theme between 7 PM and 6 AM
-if (hour > 18 || hour < 6)
-  set background=dark
-else
-  set background=light
-endif
 
 " Enable light line
 set laststatus=2
