@@ -171,6 +171,7 @@ vnoremap <C-a> :call IncrementNumbersInColumn()<CR>
 " (using Droid Sans Mono for Powerline)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
 
 
 " Goodies gotten from `DestroyAllSoftware` File navigation in Vim screencast
