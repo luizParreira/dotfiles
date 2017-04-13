@@ -34,6 +34,8 @@ Plugin 'tpope/vim-commentary'
 Plugin 'w0rp/ale'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'honza/vim-snippets'
+Plugin 'carlosgaldino/elixir-snippets'
 
 call vundle#end()
 
