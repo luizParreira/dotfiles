@@ -20,6 +20,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'slashmili/alchemist.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'atelierbram/vim-colors_atelier-schemes'
@@ -42,8 +43,11 @@ filetype indent plugin on
 let mapleader=","
 
 " Colorscheme
+set t_Co=256
+if has("termguicolors")
+  set termguicolors
+endif
 colorscheme petrel
-set termguicolors
 set background=dark
 "highlight LineNr ctermfg=grey ctermbg=black
 "highlight TabLineFill ctermfg=LightGreen ctermbg=LightSkyBlue
@@ -55,8 +59,6 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 
 " Show partial commands in the last line of the screen
 set showcmd
-
-set t_Co=256
 
 let hour = str2nr(system('date +%H'), 10)
 
