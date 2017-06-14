@@ -37,6 +37,7 @@ Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
 Plugin 'carlosgaldino/elixir-snippets'
+Plugin 'sjl/vitality.vim'
 
 call vundle#end()
 
@@ -64,8 +65,6 @@ let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
 set showcmd
 
 let hour = str2nr(system('date +%H'), 10)
-
-" Set the dark theme between 7 PM and 6 AM
 
 " Enable light line
 set laststatus=2
