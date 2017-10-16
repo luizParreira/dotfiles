@@ -38,6 +38,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'honza/vim-snippets'
 Plugin 'carlosgaldino/elixir-snippets'
 Plugin 'sjl/vitality.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'hdima/python-syntax'
+Plugin 'dracula/vim'
 
 call vundle#end()
 
@@ -46,13 +49,29 @@ filetype indent plugin on
 " Map my leader ket
 let mapleader=","
 
+" easymotion
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
+"set t_Co=256
+"if has("termguicolors")
+"  set termguicolors
+"endif
 " Colorscheme
-set t_Co=256
-if has("termguicolors")
-  set termguicolors
-endif
-colorscheme petrel
-set background=dark
+colorscheme dracula
+"set background=dark
 "highlight LineNr ctermfg=grey ctermbg=black
 "highlight TabLineFill ctermfg=LightGreen ctermbg=LightSkyBlue
 "highlight TabLine ctermfg=black ctermbg=CornFlowerBlue
@@ -175,7 +194,6 @@ vnoremap <C-a> :call IncrementNumbersInColumn()<CR>
 " (using Droid Sans Mono for Powerline)
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
 
 
 " Goodies gotten from `DestroyAllSoftware` File navigation in Vim screencast
