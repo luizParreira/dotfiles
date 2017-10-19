@@ -196,6 +196,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 
+" JSX linter on `.js` files
+let g:jsx_ext_required = 0
+
 " Goodies gotten from `DestroyAllSoftware` File navigation in Vim screencast
 " https://www.destroyallsoftware.com/screencasts/catalog/file-navigation-in-vim
 "
