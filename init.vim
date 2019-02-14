@@ -19,6 +19,7 @@ Plugin 'file:///Users/luiz/vim-swift'
 Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'vim-airline/vim-airline'
@@ -41,6 +42,12 @@ Plugin 'sjl/vitality.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'hdima/python-syntax'
 Plugin 'dracula/vim'
+Plugin 'xojs/vim-xo'
+Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plugin 'flowtype/vim-flow', {
+  \ 'autoload': {
+  \   'filetypes': 'javascript'
+  \ }}
 
 call vundle#end()
 
@@ -76,6 +83,11 @@ colorscheme dracula
 "highlight TabLineFill ctermfg=LightGreen ctermbg=LightSkyBlue
 "highlight TabLine ctermfg=black ctermbg=CornFlowerBlue
 "highlight TabLineSel ctermfg=black ctermbg=RoyalBlue
+
+let g:syntastic_javascript_checkers = ['xo']
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " Configuring visual of linter
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
@@ -230,3 +242,20 @@ function! GitRenameFile()
   endif
 endfunction
 map <leader>g :call GitRenameFile()<cr>
+
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
