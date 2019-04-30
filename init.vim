@@ -1,9 +1,11 @@
 syntax on
 
 filetype off " required by vundle
-set rtp+=~/.vim/bundle/vundle
-call vundle#begin()
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin()            " required
+set shell=/bin/bash
 
+Plugin 'VundleVim/Vundle.vim'  " required
 Plugin 'gmarik/vundle'
 
 Plugin 'scrooloose/nerdtree'
